@@ -26,7 +26,7 @@ public class MessageService {
             return messageRepository.save(message);
         } else {
             Optional<Message> optionalMessage=messageRepository.getById(message.getIdMessage());
-            if(optionalMessage.isEmpty()) {                                                            //verificar todos los !
+            if(optionalMessage.isEmpty()) {
                 return messageRepository.save(message);
             } else {
                 return message;
